@@ -82,6 +82,18 @@ Public Class conexion
         End Try
     End Function
 
+    Public Function consultarPsw(correo As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("buscarUsurioPorCorreo", conexion)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+
+
+    End Function
+
 End Class
 
 

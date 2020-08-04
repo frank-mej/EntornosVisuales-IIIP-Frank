@@ -237,6 +237,7 @@ Partial Class form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(401, 458)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnBuscar)

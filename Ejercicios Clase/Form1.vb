@@ -40,11 +40,11 @@ Public Class form1
         Dim idUsuario As Integer
         Dim nombre, apellido, userName, psw, correo, rol, estado As String
         idUsuario = txtCodigo.Text
-        nombre = txtNombre.Text
-        apellido = txtApellido.Text
+        nombre = cadenaTexto(txtNombre.Text)
+        apellido = cadenaTexto(txtApellido.Text)
         userName = txtUsuario.Text
         psw = txtContraseña.Text
-        correo = txtCorreo.Text
+        correo = txtCorreo.Text.ToLower
         estado = "activo"
         rol = cmbRol.Text
         Try
@@ -59,6 +59,12 @@ Public Class form1
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Function cadenaTexto(ByVal text As String)
+
+        Return StrConv(text, VbStrConv.ProperCase)
+
+    End Function
 
     Private Sub eliminarUsuario()
         Dim idUsuario As Integer
